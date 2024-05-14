@@ -1,0 +1,1 @@
+R:Na 2b o elemento é puxado antes  de ser declarado

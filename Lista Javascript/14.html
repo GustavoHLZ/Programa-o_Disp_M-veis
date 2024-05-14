@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>calculadora</title>
+    </head>
+
+    <style>
+
+    body{
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      background-color: aquamarine;
+    }
+    .calculadora{
+        height: 70vh;
+        width: 70vh;
+        border-radius: 20px;
+        background-color: rgba(0, 0, 0, 0.644);
+    }
+
+    #display{
+        border-radius: 20px 20px 0px 0px;
+        background-color: black;
+        width: 100%;
+        height: 25%;
+        font-size: 30pt;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        color: white;
+        
+    }
+    .button{
+        width: 25%;
+        text-align: center;
+        background-color: aliceblue;
+        width: 100%;
+        border: 1px solid black;
+    }
+    #teclado{
+        display: grid;
+        height: 75%;
+        grid-template-areas: 
+        "buttonMais buttonMenos buttonMult buttonDiv "
+        "bnt7 bnt8 bnt9 equal"
+        "bnt4 bnt5 bnt6 equal"
+        "bnt1 bnt2 bnt3 equal"
+        "bnt0 bntdot bntClear equal"
+        ; 
+    }
+
+.button:active{
+   background-color: grey;
+}
+
+    #bntMais{grid-area:buttonMais;}
+    #bntMenos{grid-area:buttonMenos;}
+    #bntMult{grid-area:buttonMult;}
+    #bntDiv{grid-area:buttonDiv;}
+    #bntequal{grid-area:equal ;}
+    #bnt0{grid-area:bnt0 ;}
+    #bnt1{grid-area:bnt1 ;}
+    #bnt2{grid-area:bnt2 ;}
+    #bnt3{grid-area:bnt3 ;}
+    #bnt4{grid-area:bnt4 ;}
+    #bnt5{grid-area:bnt5 ;}
+    #bnt6{grid-area:bnt6 ;}
+    #bnt7{grid-area:bnt7 ;}
+    #bnt8{grid-area:bnt8 ;}
+    #bnt9{grid-area:bnt9 ;}
+    #bntdot{grid-area:bntdot ;}
+    #bntClear{grid-area:bntClear ;}
+
+    #bntequal{
+        grid-area: equal;
+        background-color: orange;
+        
+    }
+    
+</style>
+
+    <body>
+
+        <div class="calculadora">
+            <div id="display"></div>
+            <div id="teclado">
+                <div class="button buttonOp" id="bntMais">+</div>
+                <div class="button buttonOp" id="bntMenos">-</div>
+                <div class="button buttonOp" id="bntMult">*</div>
+                <div class="button buttonOp" id="bntDiv">/</div>
+                <div class="button ButtonChar buttonNumber" id="bnt1">1</div>
+                <div class="button ButtonChar buttonNumber" id="bnt2">2</div>
+                <div class="button ButtonChar buttonNumber" id="bnt3">3</div>
+                <div class="button ButtonChar buttonNumber" id="bnt4">4</div>
+                <div class="button ButtonChar buttonNumber" id="bnt5">5</div>
+                <div class="button ButtonChar buttonNumber" id="bnt6">6</div>
+                <div class="button ButtonChar buttonNumber" id="bnt7">7</div>
+                <div class="button ButtonChar buttonNumber" id="bnt8">8</div>
+                <div class="button ButtonChar buttonNumber" id="bnt9">9</div>
+                <div class="button ButtonChar buttonNumber" id="bnt0">0</div>
+            
+                <div class="button ButtonChar" id="bntdot">.</div>
+                <div class="button ButtonChar" id="bntClear">AC</div>
+                <div class="button equal" id="bntequal">=</div>
+            </div>
+
+        </body>
+
+
+        <script>
+
+            let display=document.querySelector("#display");
+            let equacao="0"
+            display.textContent=equacao;
+            let bntequal=document.querySelector("#bntequal");
+            bntequal.addEventListener('click', ()=> {
+                display.textContent=eval(equacao)
+            });
+
+        </script>
+    </html>

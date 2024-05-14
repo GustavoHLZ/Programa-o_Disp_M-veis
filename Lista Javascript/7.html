@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+
+        <div>
+            <label for="a">Número a:</label>
+            <input type="number" name id="a"></div><br>
+        <div>
+            <label for="b">Número b:</label>
+            <input type="text" name id="b">
+        </div>
+
+        <button id="button" onmouseover="loadVar()">Efetuar soma</button>
+
+        <p id="resultSoma"></p>
+        <script>
+            let btn = document.querySelector("#button")
+            function soma(a,b){
+                if(typeof(a) == "number" && typeof(b) == "number"){
+                    return a+b
+            }
+        }
+
+            let a  = document.querySelector("#a")
+            let b  = document.querySelector("#b")
+            let resultado = document.querySelector("#resultSoma")
+            btn.addEventListener('click', loadVar)
+
+            function loadVar(){
+
+                let nA = Number(a.value)
+                let nB = Number(b.value)
+                let calc = (soma(nA,nB))
+                console.log(calc)
+                alert(calc)
+                resultado.innerHTML=calc
+            }
+    </script>
+
+    </body>
+</html>

@@ -1,0 +1,27 @@
+*{
+
+    padding: 0px;
+    margin: 0 px;
+    box-sizing: content-box;
+}
+
+ .container{
+    display: flex;
+    height: 100vh;
+ }
+
+ .box{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    width: 20%;
+    justify-content: flex-end;
+    align-items: center;
+    padding-bottom: 30px;
+ }
+ 
+
+  .box>p{
+    font-weight: bold;
+    font-size: 20pt;
+  }

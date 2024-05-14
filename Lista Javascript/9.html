@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <button id="btn">0</button>
+    
+
+    <script>
+        let b = document.querySelector("#btn")
+        b.addEventListener('click', ()=>{
+            b.innerHTML=Number(b.innerHTML)+1
+        })
+</script>
+    
+</body>
+</html>
