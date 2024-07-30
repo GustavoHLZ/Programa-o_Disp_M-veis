@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calculadora Simples</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+
+    .container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 5px;
+        width: 300px;
+        margin: 100px auto;
+        padding: 10px;
+        border: 1px solid black;
+        border-radius: 30px;
+ 
+    }
+
+    .button {
+        padding: 10px;
+        font-size: 20px;
+        text-align: center;
+        cursor: pointer;
+        border: 1px solid black;
+        border-radius: 20px;
+   
+    }
+
+    .tela {
+        grid-column: span 4;
+        padding: 10px;
+        font-size: 24px;
+        text-align: right;
+   
+        border: 1px solid black;
+        border-radius: 20px;
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <div class="tela" id="tela">0</div>
+    <div class="button" onclick="limpar()">C</div>
+    <div class="button" onclick="addtxt('7')">7</div>
+    <div class="button" onclick="addtxt('8')">8</div>
+    <div class="button" onclick="addtxt('9')">9</div>
+    <div class="button operator" onclick="addtxt('+')">+</div>
+    <div class="button" onclick="addtxt('4')">4</div>
+    <div class="button" onclick="addtxt('5')">5</div>
+    <div class="button" onclick="addtxt('6')">6</div>
+    <div class="button operator" onclick="addtxt('-')">-</div>
+    <div class="button" onclick="addtxt('1')">1</div>
+    <div class="button" onclick="addtxt('2')">2</div>
+    <div class="button" onclick="addtxt('3')">3</div>
+    <div class="button operator" onclick="addtxt('*')">*</div>
+    <div class="button" onclick="addtxt('0')">0</div>
+    <div class="button" onclick="addtxt('.')">.</div>
+    <div class="button operator" onclick="calcular()">=</div>
+    <div class="button operator" onclick="addtxt('/')">/</div>
+</div>
+
+<script>
+    let tela = document.getElementById('tela');
+
+    function addtxt(n) {
+        tela.textContent += n;
+    }
+
+    function limpar() {
+        tela.textContent = '0';
+    }
+
+    function calcular() {
+        tela.textContent = eval(tela.textContent);
+    }
+</script>
+
+</body>
+</html>
